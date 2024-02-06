@@ -36,3 +36,18 @@ h3 {
 .model-name {
   font-size: 1.0rem;
 }
+
+.card-container {
+  display: flex;
+  align-items: stretch;
+}
+
+.card-container > div {
+  margin-right: 10px;
+}
+
+.card {
+  background-color: #F8F8F8;
+  padding: 16px;
+  flex-grow: 1;
+}
