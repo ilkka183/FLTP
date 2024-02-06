@@ -1,5 +1,5 @@
 import BrandList from "./BrandList";
-import { Brand } from "../types/Data";
+import { Brand } from "../types/data";
 
 interface Props {
   brands: Brand[];

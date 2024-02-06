@@ -1,20 +1,25 @@
 import VehicleCard from "./VehicleCard";
-import { Brand, Vehicle } from "../types/Data";
+import { Brand, Vehicle, getVehicles } from "../types/data";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   brand: Brand;
 }
 
 export default function BrandList({ brand }: Props) {
+  const navigate = useNavigate();
+
   const handleClick = (vehicle: Vehicle) => {
-    alert(vehicle.model);
+    navigate("/vehicle/" + vehicle.id);
   };
+
+  const vehicles = getVehicles(brand.name);
 
   return (
     <div>
       <h3>{brand.name}</h3>
       <div>
-        {brand.vehicles.map((vehicle, index) => (
+        {vehicles.map((vehicle, index) => (
           <div key={index}>
             <VehicleCard vehicle={vehicle} onClick={handleClick} />
           </div>

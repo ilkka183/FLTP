@@ -1,4 +1,4 @@
-import { Vehicle } from "../types/Data";
+import { Vehicle } from "../types/data";
 
 interface Props {
   vehicle: Vehicle;
