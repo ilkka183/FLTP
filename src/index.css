@@ -17,15 +17,34 @@ h3 {
 }
 
 .vehicle-card {
-  border-bottom-style: solid;
-  border-color: silver;
   border-radius: 10px;
-  border-width: thin;
+  padding: 8px;
+  position: relative;
+}
+
+.vehicle-card:before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  bottom: 0px;
+  width: calc(100% - 16px);
+  color: silver;
+  border-bottom: solid;
+  border-width: 1px;
   padding: 8px;
 }
 
 .vehicle-card:hover {
   background-color: #F8F8F8;
+}
+
+.brand {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.thank-you {
+  margin-top: 20px;
 }
 
 .model-year {
@@ -50,4 +69,35 @@ h3 {
   background-color: #F8F8F8;
   padding: 16px;
   flex-grow: 1;
+}
+
+.card-title {
+  color: 	#303030;
+  font-size: 1.0rem;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.card-value {
+  font-size: 2.0rem;
+  font-weight: bold;
+  line-height: 90%;
+}
+
+.card-unit {
+  color: gray;
+  font-size: 1.0rem;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.separator {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.path {
+  padding-bottom: 8px;
 }

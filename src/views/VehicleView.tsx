@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ConsumptionCard from "../components/ConsumptionCard";
 import RangeCard from "../components/RangeCard";
 import { getVehicle } from "../types/data";
@@ -11,12 +11,19 @@ export default function VehicleView() {
 
   return (
     <div className="main-container">
-      <div>
+      <div className="path">
+        <Link to="/" className="link">
+          FLTP tietokanta
+        </Link>
+        <span className="separator">&gt;</span>
+        <span>Cupra</span>
+      </div>
+      <div className="model-year">
         {vehicle?.firstYear}-{vehicle?.lastYear}
       </div>
-      <h2>{vehicle?.brand}</h2>
+      <div className="brand">{vehicle?.brand}</div>
       <div>{vehicle?.model}</div>
-      <div>
+      <div className="thank-you">
         Kiitos kaikille FLTP:n osallistujille. Ilman teitä, näitä tuloksia ei
         olisi.
       </div>
