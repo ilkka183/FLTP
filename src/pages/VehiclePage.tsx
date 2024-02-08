@@ -1,11 +1,11 @@
 import { Link, useParams } from "react-router-dom";
 import ConsumptionCard from "../components/ConsumptionCard";
 import RangeCard from "../components/RangeCard";
-import { getVehicle } from "../types/data";
+import { getVehicle } from "../utils/data";
 
-export default function VehicleView() {
-  const params = useParams();
-  const vehicle = getVehicle(Number(params.id));
+export default function VehiclePage() {
+  const { id } = useParams();
+  const vehicle = getVehicle(Number(id));
 
   if (vehicle == null) return <div>Ajoneuvoa ei löytynyt!</div>;
 

@@ -1,11 +1,7 @@
-import BrandList from "./BrandList";
-import { Brand } from "../types/data";
+import BrandList from "../components/BrandList";
+import { brands } from "../utils/data";
 
-interface Props {
-  brands: Brand[];
-}
-
-export default function BrandsList({ brands }: Props) {
+export default function DatabasePage() {
   return (
     <div className="main-container">
       <h2>Tietokanta</h2>

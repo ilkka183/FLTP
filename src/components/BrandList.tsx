@@ -1,5 +1,5 @@
 import VehicleCard from "./VehicleCard";
-import { Brand, Vehicle, getVehicles } from "../types/data";
+import { Brand, Vehicle, getVehicles } from "../utils/data";
 import { useNavigate } from "react-router-dom";
 
 interface Props {
